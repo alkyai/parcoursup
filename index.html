@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlkyAI – Résultats Parcoursup 2025/2026</title>
+  <link rel="stylesheet" href="contacts.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="icon" href="9448bfc1-2cb2-46be-924a-c9d4da2d4d9f.png" type="image/png">
+</head>
+<body>
+  <header class="hero">
+    <div class="logo-container">
+      <img src="9448bfc1-2cb2-46be-924a-c9d4da2d4d9f.png" alt="Logo AlkyAI" class="logo">
+      <h1 class="site-title">AlkyAI</h1>
+      <p class="subtitle">Obtiens ton classement sur tes voeux Parcoursup 2025/2026 <strong>sans procédure</strong></p>
+      
+
+    </div>
+    <div class="official-logos">
+  <img src="Logo_du_Gouvernement_de_la_République_française_(2020).svg.png" alt="Logo Parcoursup" />
+  <img src="Logo-parcoursup-bis.jpg" alt="Logo Éducation nationale" />
+  <img src="logo-ministere-education-nationale.jpg" alt="Logo Gouvernement" />
+</div>
+
+  </header>
+
+  <section class="intro">
+    <h2>Un service rapide, confidentiel et accessible pour tout les lycéens, collégiens et étudiants de France !</h2>
+    <p>
+      AlkyAI utilise l’intelligence artificielle et les informations officielles pour retrouver votre classement parcoursup <strong>pour les voeux que vous avez formulé !</strong> 
+    </p>
+  </section>
+
+  <section class="form-section">
+    <div class="security-message">
+  <span class="lock-icon">🔒</span>
+  <p>
+    Paiement 100% sécurisé via <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>. Aucune information bancaire n’est stockée sur notre site.
+  </p>
+</div>
+
+
+    <h2>Faire une demande</h2>
+    <form id="payment-form">
+      <label for="name">Nom + Prénom :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Adresse mail :</label>
+      <input type="email" id="email" name="email" required>
+
+      
+
+      <label for="academy">Académie :</label>
+      <select id="academy" name="academy" required>
+  <option value="">-- Choisir une académie --</option>
+  <option value="Aix-Marseille">Aix-Marseille</option>
+  <option value="Amiens">Amiens</option>
+  <option value="Besançon">Besançon</option>
+  <option value="Bordeaux">Bordeaux</option>
+  <option value="Clermont-Ferrand">Clermont-Ferrand</option>
+  <option value="Corse">Corse</option>
+  <option value="Créteil">Créteil</option>
+  <option value="Dijon">Dijon</option>
+  <option value="Grenoble">Grenoble</option>
+  <option value="Guadeloupe">Guadeloupe</option>
+  <option value="Guyane">Guyane</option>
+  <option value="La Réunion">La Réunion</option>
+  <option value="Lille">Lille</option>
+  <option value="Limoges">Limoges</option>
+  <option value="Lyon">Lyon</option>
+  <option value="Martinique">Martinique</option>
+  <option value="Mayotte">Mayotte</option>
+  <option value="Montpellier">Montpellier</option>
+  <option value="Nancy-Metz">Nancy-Metz</option>
+  <option value="Nantes">Nantes</option>
+  <option value="Nice">Nice</option>
+  <option value="Orléans-Tours">Orléans-Tours</option>
+  <option value="Paris">Paris</option>
+  <option value="Poitiers">Poitiers</option>
+  <option value="Reims">Reims</option>
+  <option value="Rennes">Rennes</option>
+  <option value="Rouen">Rouen</option>
+  <option value="Strasbourg">Strasbourg</option>
+  <option value="Toulouse">Toulouse</option>
+  <option value="Versailles">Versailles</option>
+  <option value="Wallis-et-Futuna">Wallis-et-Futuna</option>
+  <option value="Saint-Pierre-et-Miquelon">Saint-Pierre-et-Miquelon</option>
+  <option value="Polynésie française">Polynésie française</option>
+  <option value="Nouvelle-Calédonie">Nouvelle-Calédonie</option>
+   <option value="Nouvelle-Calédonie">Autres</option>
+
+</select>
+
+
+      <label for="subject">Nom de l'établissment saisis :</label>
+      <input type="text" id="subject" name="subject">
+
+      <button type="button" id="checkout-button">Obtenir mon classment</button>
+      <p id="error-message" style="color: red; display: none;"></p>
+      <p class="payment-delay-message">
+  ⏳ Le chargement du paiement peut prendre quelques minutes en raison d'une forte affluence.
+</p>
+
+      <div class="payment-icons">
+  <img src="Apple_Pay_logo.svg.png" alt="Visa">
+  <img src="Mastercard-logo.svg.webp" alt="Mastercard">
+  <img src="stripe-1e3d81f8.png" alt="Amex">
+  <img src="Google_Pay_Logo.svg.png" alt="11">
+  <img src="Visa-Logo-2006–2014.jpg" alt="22">
+</div>
+
+
+
+    </form>
+  </section>
+  <section class="service-notice">
+  <p>📩 Les classements sont envoyés par email après paiement.<small class="email-hint">Veuillez entrer une adresse email valide – votre classement y seront envoyées.</small></p>
+  <p>💸 Satisfait ou remboursé : vous pouvez demander un remboursement en cas d’erreur ou d’insatisfaction.</p>
+</section>
+
+
+<section class="temoignages-alkyai">
+  <div class="container">
+    <h2 class="title">📢 Ils ont obtenus leur classement...</h2>
+    <p class="intro">
+      
+    </p>
+
+    <div class="avis-grid">
+
+      <!-- Témoignage 1 -->
+      <div class="card">
+        <div class="profil">
+          <img src="tiktok.jpg" alt="LinaWave" />
+          <div>
+            <h3>@les_fifousssss</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “olololo la honte > 5000 eme  !!!!!”
+        </p>
+        
+      </div>
+
+      <!-- Témoignage 2 -->
+      <div class="card">
+        <div class="profil">
+          <img src="insta.jpg" alt="ZackBoost" />
+          <div>
+            <h3>@zacknot</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “votez la pétition pour arréter parcousup”
+        </p>
+       
+      </div>
+
+      <!-- Témoignage 3 -->
+      <div class="card">
+        <div class="profil">
+          <img src="cartoon-tiktok-pfp.avif" alt="MayaFlow" />
+          <div>
+            <h3>@mistraworld</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “purée trop le seum jsuis 5 eme pr insa”
+        </p>
+        
+      </div>
+      <div class="card">
+        <div class="profil">
+          <img src="" alt="jerome" />
+          <div>
+            <h3>@jeromestble</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “aïe 😢"
+        </p>
+        
+      </div>
+      <div class="card">
+        <div class="profil">
+          <img src="" alt="yanisbnda" />
+          <div>
+            <h3>@yanisbenouda</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “ouiiiiiiiiiiiiiiiiiiiiiiiiii”
+        </p>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="fake-comment-section">
+  <h2>Laissez vos commentaires ci-joint :</h2>
+  <div class="comment-box">
+    <textarea id="fake-comment-text" placeholder="Écrivez votre commentaire ici..."></textarea>
+    <button id="fake-comment-button" type="button">Envoyer</button>
+    <p id="fake-comment-message" style="display: none; color: green; font-weight: bold;">✅ Commentaire envoyé !</p>
+  </div>
+</section>
+<p style="
+  color: red;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 520px;
+  line-height: 1.7;
+  padding: 0.75rem 1rem;
+">
+  *Attention : la réception du classement dépend des données disponibles par académie. Le prix peut également varié en fonction de la demande par personne et par académie > entre 2 EUR et 6 EUR.
+Ce qui explique les variations de prix lors de vos différentes connexions à notre IA.</p>
+
+
+  <footer class="trusted-footer">
+  <div class="trust-messages">
+    <p>Contact : <a href="admin@alkyai.fr" target="_blank" rel="noopener noreferrer">admin@alkyai.fr</a> </p>
+    <p>🔒 Paiement 100% sécurisé via <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a></p>
+    <p>📁 Données hébergées en Europe chez <a href="https://www.ionos.fr" target="_blank" rel="noopener noreferrer">IONOS</a></p>
+    <p>📚 Méthodologie inspirée des critères de l'<a href="https://www.education.gouv.fr" target="_blank" rel="noopener noreferrer">Éducation Nationale</a></p>
+    <p>✅ Site certifié conforme RGPD – aucune donnée revendue</p>
+  </div>
+  <div class="legal">
+    <p>&copy; 2025 AlkyAI – Tous droits réservés</p>
+    
+  </div>
+</footer>
+
+
+        
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const stripe = Stripe('pk_live_51RhQxmCk1lAKRItNO3wkwG3BAIhR6b2p65leLb73gqsannOXxTA7vxFf8tJQu9Y0j8x9YaSbag7Uliusvt4Y5T2a00NOPrCwk1');
+    const errorMessage = document.getElementById('error-message');
+    const checkoutButton = document.getElementById('checkout-button');
+
+    const loadingMessage = document.createElement('div');
+    loadingMessage.id = 'loading-message';
+    loadingMessage.style.display = 'none';
+    loadingMessage.style.marginTop = '15px';
+    loadingMessage.style.textAlign = 'center';
+    loadingMessage.innerHTML = `
+      <p style="font-size: 16px;">Merci de patienter...</p>
+      <div class="spinner" style="border: 4px solid rgba(0, 0, 0, 0.1); border-left-color: #000; width: 30px; height: 30px; border-radius: 50%; animation: spin 1s linear infinite; margin: auto;"></div>
+    `;
+    checkoutButton.parentNode.insertBefore(loadingMessage, checkoutButton.nextSibling);
+
+    checkoutButton.addEventListener('click', async () => {
+      loadingMessage.style.display = 'block';
+      errorMessage.style.display = 'none';
+        
+
+      try {
+                const response = await fetch('https://copiesbacbrevet.onrender.com/create-checkout-session-formation', {
+
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Erreur lors de la création de la session de paiement.");
+        }
+
+        const session = await response.json();
+        const result = await stripe.redirectToCheckout({ sessionId: session.id });
+
+        if (result.error) {
+          throw new Error(result.error.message);
+        }
+      } catch (error) {
+        errorMessage.textContent = `Erreur : ${error.message}`;
+        errorMessage.style.display = 'block';
+        loadingMessage.style.display = 'none';
+        console.error("Erreur :", error);
+      }
+    });
+  });
+  
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fakeButton = document.getElementById('fake-comment-button');
+    const fakeMessage = document.getElementById('fake-comment-message');
+    const fakeTextarea = document.getElementById('fake-comment-text');
+
+    fakeButton.addEventListener('click', () => {
+      const content = fakeTextarea.value.trim();
+      if (content.length === 0) {
+        fakeMessage.style.color = 'red';
+        fakeMessage.textContent = '❌ Veuillez écrire un commentaire.';
+        fakeMessage.style.display = 'block';
+        return;
+      }
+
+      fakeMessage.style.color = 'green';
+      fakeMessage.textContent = '✅ Commentaire envoyé !';
+      fakeMessage.style.display = 'block';
+
+      // Optionnel : effacer le commentaire simulé
+      fakeTextarea.value = '';
+    });
+  });
+</script>
+
+</body>
+</html>
